@@ -1,0 +1,9 @@
+PyPDF2 
+sentence_transformers
+faiss-cpu
+numpy
+openai
+pytest
+python-dotenv
+pyfiglet
+termcolor

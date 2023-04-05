@@ -1,0 +1,12 @@
+cache/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.cache/
+*.pdf
+.env
+book.pdf
