@@ -54,6 +54,21 @@ The script will process the book, create embeddings, and store them in the FAISS
 
 To exit the chat interface, type "exit".
 
+
+
+## How it works: Faiss, Embeddings, and LLM API
+
+Our project employs an efficient architecture combining Faiss, embeddings, and a Language Model API (LLM) to deliver an intelligent AI chat interface for book-related queries. Here's a simplified overview:
+
+1. **Embeddings**: Embeddings are dense vector representations of text, generated using natural language processing techniques. We use Hugging Face's Sentence-BERT (SBERT) model to create embeddings for the book's text. SBERT, a modification of BERT, is designed specifically to produce sentence embeddings for direct similarity comparison, allowing efficient searches for the most relevant passages with Faiss.
+
+2. **Faiss Library**: Developed by Facebook AI Research, Faiss is designed for efficient similarity search and clustering of dense vectors in large datasets. It helps us quickly find the most relevant text passages from the book by creating an **index** of the SBERT embeddings. This allows us to perform fast and efficient similarity searches to find the most relevant passages for a given user query.
+
+3. **LLM API**: The Language Model API (LLM) is an interface to advanced natural language processing models like OpenAI's GPT-3. It's used to create AI responses based on relevant text passages found using Faiss and embeddings. The LLM model understands the context of the text, generating meaningful responses to user queries.
+
+In essence, our architecture fuses Faiss, embeddings, and the LLM API to deliver an AI chat interface capable of providing precise book-related answers. Faiss and embeddings allow fast similarity searches for relevant passages, while the LLM API generates context-aware responses, creating a helpful chat interface even when dealing with large amounts of text.
+
+
 ## Co-Authors
 - adkri
 - GPT-4
